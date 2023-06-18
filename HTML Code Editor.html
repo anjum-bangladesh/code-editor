@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Code Editor</title>
+        <script>
+            function CompileHTML(field ,e){ 
+                 document.getElementById ('out').innerHTML= field.value;
+            }
+            function CompileCSS(field ,e){ 
+                 document.getElementById ('styling').innerHTML= field.value;
+            }
+        </script>
+    </head>
+    <body>
+        <div style="background-color:#0c0401;height: 50px; width: 100%;" class="menu" id="menu_id">
+           <h1><center style="color:#ffb0f8">HTML Code Editor</center></h1> 
+        </div>
+        <style id="styling">
+
+        </style>
+
+        <div style="display: flex;">
+            <textarea style="flex 1;height: 150px;width: 50%;"placeholder="HTML code ..."onkeyup="CompileHTML(this)"></textarea>
+            <textarea style="flex 1;height: 150px;width: 50%;"placeholder="CSS code ..."onkeyup="CompileCSS(this)"></textarea>
+        
+        </div>
+<div style="background-color:#ca8ec2;height: 50px; width: 100%;" class="menu" id="menu_id"><h1 style="color:rgb(2, 0, 2);">Output:</h1></div>
+
+     <div id="out"></div>
+
+    </body>
+</html>
